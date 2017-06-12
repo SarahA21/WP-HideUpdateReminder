@@ -2,23 +2,46 @@
 /*
 Plugin Name: Hide Update Reminder
 Plugin URI: http://www.stuffbysarah.net/wordpress-plugins/remove-update-reminder/
-Description: Allows you to remove the upgrade Nag screen from view for Editors and below
+Description: Allows you to remove the upgrade Nag screen from view for selected user roles
 Author: Sarah Anderson
-Version: 1.2.1
+Version: 2.0
 Author URI: http://www.stuffbysarah.net/
 
-Thanks to Viper007Bond for the code hints
+Thanks to Viper007Bond for the admin notice hook
 */
 
-class HideUpdateReminder {
-	function __construct() {
-		add_action('admin_init', array(&$this, 'check_user'));
+class HideUpdateReminder
+{
+	function __construct()
+	{
+		add_action( 'admin_init', [ $this, 'check_user' ] );
+		add_action('admin_menu', [ $this, 'add_options_link' ] );
 	}
 
-	function check_user() {
-		global $userdata;
-		if (!current_user_can('update_plugins'))
+	function check_user()
+	{
+		if ( ! current_user_can( 'update_core' ) ) :
 			remove_action('admin_notices', 'update_nag', 3);
+		endif;
+	}
+	
+	function add_options_link()
+	{
+		add_options_page( 'Hide Update Reminder Settings', 'Hide Update Reminder', 'manage_options', 'hide-update-rem', [ $this, 'options_page' ] );
+	}
+	
+	function options_page()
+	{
+	?>
+   		<div class="wrap">
+			<form action="options.php" method="post">
+       			<?php
+				settings_fields( 'hide-update-rem-settings' );
+				do_settings_sections( 'hide-update-rem-settings' );
+			?>
+			</form>
+ 		</div>
+ 	<?php
 	}
 }
 
