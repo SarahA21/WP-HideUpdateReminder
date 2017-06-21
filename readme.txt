@@ -33,7 +33,7 @@ Installation Instructions:
 = 1.3 =
 
 * Modernised the PHP code in use
-* Changed the action hook to update_core
+* Changed the action hook to update_core for improved multi-site support
 * Formatted code to adhere to WordPress coding standards
 
 == Support ==
