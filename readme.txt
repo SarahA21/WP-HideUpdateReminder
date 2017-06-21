@@ -1,10 +1,10 @@
 === Hide Update Reminder ===
 Contributors: sarahg111
 Donate link: http://www.stuffbysarah.net/blog/wordpress-plugins/#donate
-Tags: admin, upgrade, cms
+Tags: multisite, admin, upgrade, cms
 Requires at least: 2.5
-Tested up to: 3.5
-Stable tag: 1.2.1
+Tested up to: 4.8
+Stable tag: 1.3
 
 Hides the Update Reminder in the Admin for all non Admin users.
 
@@ -28,6 +28,16 @@ Installation Instructions:
 == Screenshots ==
 
 
+== Changelog ==
+
+= 1.3 =
+
+* Modernised the PHP code in use
+* Changed the action hook to update_core for improved multi-site support
+* Formatted code to adhere to WordPress coding standards
+
 == Support ==
 
-Support is provided at http://www.stuffbysarah.net/blog/wordpress-plugins/remove-update-reminder/
+Support is provided at:  
+http://www.stuffbysarah.net/blog/wordpress-plugins/remove-update-reminder/  
+https://github.com/SarahA21/WP-HideUpdateReminder/
