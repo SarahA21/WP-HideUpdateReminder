@@ -1,7 +1,7 @@
 === Hide Update Reminder ===
 Contributors: sarahg111
 Donate link: http://www.stuffbysarah.net/blog/wordpress-plugins/#donate
-Tags: admin, upgrade, cms
+Tags: multisite, admin, upgrade, cms
 Requires at least: 2.5
 Tested up to: 4.8
 Stable tag: 1.3
