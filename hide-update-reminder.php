@@ -6,6 +6,10 @@ Description: Allows you to remove the upgrade Nag screen from view for selected 
 Author: Sarah Anderson
 Version: 2.0
 Author URI: http://www.stuffbysarah.net/
+License: GPLv2
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hide-update-reminder
+Domain Path: /languages
 
 Thanks to Viper007Bond for the admin notice hook
 */
