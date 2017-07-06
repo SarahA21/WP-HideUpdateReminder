@@ -4,7 +4,7 @@ Plugin Name: Hide Update Reminder
 Plugin URI: http://www.stuffbysarah.net/wordpress-plugins/remove-update-reminder/
 Description: Allows you to remove the upgrade Nag screen from view for anyone who cannot update the core files
 Author: Sarah Anderson
-Version: 1.3
+Version: 1.3.1
 Author URI: http://www.stuffbysarah.net/
 
 This plugin is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
@@ -20,7 +20,7 @@ class HideUpdateReminder
 {
 	function __construct()
 	{
-		add_action( 'admin_init', [ $this, 'check_user' ] );
+		add_action( 'admin_init', array( $this, 'check_user' ) );
 	}
 
 	function check_user() {
