@@ -4,7 +4,7 @@ Donate link: http://www.stuffbysarah.net/blog/wordpress-plugins/#donate
 Tags: multisite, admin, upgrade, cms
 Requires at least: 2.5
 Tested up to: 4.8
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 Hides the Update Reminder in the Admin for all non Admin users.
 
@@ -29,6 +29,10 @@ Installation Instructions:
 
 
 == Changelog ==
+
+= 1.3.1 =
+
+* Reverted array syntax to make it PHP5.3 friendly
 
 = 1.3 =
 
